@@ -1,18 +1,18 @@
-@media(min-width: 992px) {
     .main-menu {
         z-index: 100;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        max-width: 1400px;
+        //max-width: 1400px;
         width: 100%;
         margin: 0 auto;
         transition: all 0.4s ease;
-        background-color: rgba(0,0,0,0);
-        padding-top: 33px;
+        background-color: rgba(0,0,0,1);
+        padding-top: 10px;
         display: flex;
         flex-direction: row;
+        justify-content: center;
         .logotype {
             display: flex;
             flex-direction: row;
@@ -33,7 +33,7 @@
             flex-direction: row;
             list-style-type: none;
             justify-content: flex-end;
-            padding-right: 212px;
+            padding-right: 50px;
             margin: 0;
             max-width: 1400px;
             width: 100%;
@@ -52,126 +52,58 @@
         };
     };
 
-    .transparent {
-        background-color: $main-menu-color;
-        padding-top: 0;
-    }
-};
-
-@media (min-width: 768px) and (max-width: 991px) {
-    .main-menu {
-        z-index: 100;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        max-width: 1400px;
-        width: 100%;
-        margin: 0 auto;
-        transition: all 0.4s ease;
-        background-color: rgba(0,0,0,0);
-        padding-top: 33px;
-        display: flex;
-        flex-direction: row;
-        .logotype {
+    @media(max-width: 767px) {
+        .main-menu {
+            z-index: 100;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            //max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            transition: all 0.4s ease;
+            background-color: rgba(0,0,0,1);
+            padding-top: 20px;
             display: flex;
             flex-direction: row;
-            .logo {
+            justify-content: center;
+            .logotype {
                 display: flex;
                 flex-direction: row;
-                padding-left: 140px;
-                padding-top: 10px;
+                .logo {
+    
+                    padding-left: 240px;
+                    padding-top: 10px;
+                    margin: 0;
+                };
+    
+                i {
+                    display: none;
+                };
+            };
+    
+            ul {
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+                justify-content: flex-start;
+                padding-left: 20px;
                 margin: 0;
-            };
-
-            i {
-                display: none;
-            };
-        };
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            list-style-type: none;
-            justify-content: flex-end;
-            padding-right: 212px;
-            margin: 0;
-            max-width: 1400px;
-            width: 100%;
-            
-            li {
-                padding: 20px;
-                font-size: $menu-font-size;
-                text-transform: uppercase;
-                font-family: $title-font;
-                font-weight: 500;
-                color: $title-secondary-color;
-                &:hover {
-                    color: $brand-color;
+                max-width: 1400px;
+                width: 100%;
+                
+                li {
+                    padding: 20px 5px;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    font-family: $title-font;
+                    font-weight: 500;
+                    color: $title-secondary-color;
+                    &:hover {
+                        color: $brand-color;
+                    };
                 };
             };
         };
     };
-
-    .transparent {
-        background-color: $main-menu-color;
-        padding-top: 0;
-    }
-};
-
-@media(max-width: 767px) {
-    .main-menu {
-        z-index: 100;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        transition: all 0.4s ease;
-        background-color: $title-color;
-        padding-top: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
-        .logotype {
-            padding-top: 10px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            .logo {
-                padding-right: 15px;
-            };
-
-            .caret {
-                font-size: 25px;
-                color: $title-secondary-color;
-            };
-
-
-        };
-
-        ul {
-            
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            list-style-type: none;
-            margin: 0 auto;
-            padding: 0 0 20px 0; 
-            li {
-                padding: 8px 0;
-                font-size: $menu-font-size;
-                text-transform: uppercase;
-                font-family: $title-font;
-                font-weight: 500;
-                color: $title-secondary-color;
-            };
-        };
-
-        .show {
-            display: flex;
-        };
-    
-    };
-};
