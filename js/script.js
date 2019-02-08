@@ -8,10 +8,11 @@ var listItem = '';
 
 for(var i = 0; i < slidesData.length; i++){
   console.log(slidesData);
-  listItems += Mustache.render(slideItem, slidesData[i]);
+  listItem += Mustache.render(slideItem, slidesData[i]);
 }
 
-results.insertAdjacentHTML('beforeend', {title:listItems});
+var results = document.querySelector('#results');
+results.insertAdjacentHTML('beforeend', listItem);
 
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {

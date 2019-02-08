@@ -45,7 +45,7 @@
   <div class="progress-bar"></div>
 
   <script id="slide-item" type="x-tmpl-mustache">
-    <div class="carousel-cell">
+    <div class="carousel-cell" id="{{ id }}" style="background-image: url(' {{{ image }}} ')">
         <div class="container">
             <h3> {{ title }} </h3>
             {{{ description }}}
@@ -56,29 +56,34 @@
   <script>
     var slidesData = [
       {
-        image: 'pizza1.jpg', 
+        image: 'images/pizza1.jpg', 
         title: 'Sample header 1',
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        id: 'carousel-cell1',
+        description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in erat congue, dapibus dui eu, tincidunt dolor. Fusce tempor nisi ac dignissim facilisis.</p>'
       },
       {
-        image: 'pizza2.jpg', 
+        image: 'images/pizza2.jpg', 
         title: 'Sample header 2',
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        id: 'carousel-cell2',
+        description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in erat congue, dapibus dui eu, tincidunt dolor. Fusce tempor nisi ac dignissim facilisis.</p>'
       },
       {
-        image: 'pizza3.jpg', 
+        image: 'images/pizza3.jpg', 
         title: 'Sample header 3',
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        id: 'carousel-cell3',
+        description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in erat congue, dapibus dui eu, tincidunt dolor. Fusce tempor nisi ac dignissim facilisis.</p>'
       },
       {
-        image: 'pizza4.jpg', 
+        image: 'images/pizza4.jpg', 
         title: 'Sample header 4',
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        id: 'carousel-cell4',
+        description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in erat congue, dapibus dui eu, tincidunt dolor. Fusce tempor nisi ac dignissim facilisis.</p>'
       },
       {
-        image: 'pizza5.jpg', 
+        image: 'images/pizza5.jpg', 
         title: 'Sample header 5',
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        id: 'carousel-cell5',
+        description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in erat congue, dapibus dui eu, tincidunt dolor. Fusce tempor nisi ac dignissim facilisis.</p>'
       }
     ];
   </script>
