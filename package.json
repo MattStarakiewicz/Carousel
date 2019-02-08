@@ -37,6 +37,8 @@
     "onchange": "^5.1.0",
     "rimraf": "^2.6.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "mustache": "^3.0.1"
+  },
   "description": ""
 }

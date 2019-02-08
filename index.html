@@ -40,41 +40,53 @@
   <div class="button-reset">
       <button class="button reset">Reset</button>
   </div>
-  <div class="main-carousel" >
-    <div class="carousel-cell" id="carousel-cell1" style="background-image: url('images/pizza1.jpg')">
-      <div class="container">
-        <h3>Sample header 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus diam sed ex sagittis eleifend. Nam a ante sed velit ornare congue eu at nisi. Donec sodales dui eget tortor tempus viverra.</p>
-      </div>
-    </div>
-    <div class="carousel-cell" id="carousel-cell2" style="background-image: url('images/pizza2.jpg')">
-      <div class="container">
-          <h3>Sample header 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus diam sed ex sagittis eleifend. Nam a ante sed velit ornare congue eu at nisi. Donec sodales dui eget tortor tempus viverra.</p>
-      </div>
-    </div>
-    <div class="carousel-cell" id="carousel-cell3" style="background-image: url('images/pizza3.jpg')">
-      <div class="container">
-          <h3>Sample header 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus diam sed ex sagittis eleifend. Nam a ante sed velit ornare congue eu at nisi. Donec sodales dui eget tortor tempus viverra.</p>
-      </div>
-    </div>
-    <div class="carousel-cell" id="carousel-cell4" style="background-image: url('images/pizza4.jpg')">
-      <div class="container">
-          <h3>Sample header 4</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus diam sed ex sagittis eleifend. Nam a ante sed velit ornare congue eu at nisi. Donec sodales dui eget tortor tempus viverra.</p>
-      </div>
-    </div>
-    <div class="carousel-cell" id="carousel-cell5" style="background-image: url('images/pizza5.jpg')">
-      <div class="container">
-          <h3>Sample header 5</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus diam sed ex sagittis eleifend. Nam a ante sed velit ornare congue eu at nisi. Donec sodales dui eget tortor tempus viverra.</p>
-      </div>
-    </div>
-  </div>
+
+  <div class="main-carousel" id="results"></div>
   <div class="progress-bar"></div>
+
+  <script id="slide-item" type="x-tmpl-mustache">
+    <div class="carousel-cell">
+        <div class="container">
+            <h3> {{ title }} </h3>
+            {{{ description }}}
+        </div>
+    </div> 
+  </script>
+
+  <script>
+    var slidesData = [
+      {
+        image: 'pizza1.jpg', 
+        title: 'Sample header 1',
+        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+      },
+      {
+        image: 'pizza2.jpg', 
+        title: 'Sample header 2',
+        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+      },
+      {
+        image: 'pizza3.jpg', 
+        title: 'Sample header 3',
+        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+      },
+      {
+        image: 'pizza4.jpg', 
+        title: 'Sample header 4',
+        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+      },
+      {
+        image: 'pizza5.jpg', 
+        title: 'Sample header 5',
+        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+      }
+    ];
+  </script>
+
   <script type="text/javascript" src="vendor/flickity.pkgd.min.js"></script>
   <script type="text/javascript" src="vendor/hash.js"></script>
+  <script type="text/javascript" src="vendor/mustache.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
+
 </body>
 </html>

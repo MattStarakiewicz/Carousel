@@ -1,5 +1,18 @@
 'use strict';
 
+var slideItem = document.getElementById('slide-item').innerHTML;
+
+Mustache.parse(slideItem);
+
+var listItem = '';
+
+for(var i = 0; i < slidesData.length; i++){
+  console.log(slidesData);
+  listItems += Mustache.render(slideItem, slidesData[i]);
+}
+
+results.insertAdjacentHTML('beforeend', {title:listItems});
+
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
   // options
