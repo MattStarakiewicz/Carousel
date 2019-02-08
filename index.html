@@ -27,22 +27,13 @@
         <a href="#carousel-cell5"><li>Link 5</li></a>
       </ul>
     </nav>
-    <!-- <div class="container"> -->
-      <div class="home">
-        <img class="tint" src="images/pizzeria.jpg" alt="welcome image">
-        <div class="brand-title">
-          <h2 class="pre-heading">Welcome to our restaurant!</h2>
-          <h2>It's nice to see you</h2>              
-        </div>
-      </div>
-    <!-- </div> -->
   </header>
   <div class="button-reset">
       <button class="button reset">Reset</button>
   </div>
-
   <div class="main-carousel" id="results"></div>
   <div class="progress-bar"></div>
+  <div id="map"></div>
 
   <script id="slide-item" type="x-tmpl-mustache">
     <div class="carousel-cell" id="{{ id }}" style="background-image: url(' {{{ image }}} ')">
@@ -57,32 +48,37 @@
     var slidesData = [
       {
         image: 'images/pizza1.jpg', 
-        title: 'Sample header 1',
+        title: 'Święty Michał',
         id: 'carousel-cell1',
+        coords: {lat: 51.24882129, lng: 22.56860822},
         description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in erat congue, dapibus dui eu, tincidunt dolor. Fusce tempor nisi ac dignissim facilisis.</p>'
       },
       {
         image: 'images/pizza2.jpg', 
-        title: 'Sample header 2',
+        title: 'U szewca',
         id: 'carousel-cell2',
+        coords: {lat: 51.24900261, lng: 22.56887913},
         description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in erat congue, dapibus dui eu, tincidunt dolor. Fusce tempor nisi ac dignissim facilisis.</p>'
       },
       {
         image: 'images/pizza3.jpg', 
-        title: 'Sample header 3',
+        title: 'Ivo Italian',
         id: 'carousel-cell3',
+        coords: {lat: 51.24744122, lng: 22.56830245},
         description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in erat congue, dapibus dui eu, tincidunt dolor. Fusce tempor nisi ac dignissim facilisis.</p>'
       },
       {
         image: 'images/pizza4.jpg', 
-        title: 'Sample header 4',
+        title: 'Pizzeria Rynek 5',
         id: 'carousel-cell4',
+        coords: {lat: 51.24812286, lng: 22.56768286},
         description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in erat congue, dapibus dui eu, tincidunt dolor. Fusce tempor nisi ac dignissim facilisis.</p>'
       },
       {
         image: 'images/pizza5.jpg', 
-        title: 'Sample header 5',
+        title: 'Sielsko Anielsko',
         id: 'carousel-cell5',
+        coords: {lat: 51.24756882, lng: 22.56770432},
         description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in erat congue, dapibus dui eu, tincidunt dolor. Fusce tempor nisi ac dignissim facilisis.</p>'
       }
     ];
@@ -91,7 +87,8 @@
   <script type="text/javascript" src="vendor/flickity.pkgd.min.js"></script>
   <script type="text/javascript" src="vendor/hash.js"></script>
   <script type="text/javascript" src="vendor/mustache.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
+  <script async defer type="text/javascript" src="js/script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkeoHMSUYt-vOoD-Bb8jazy4HGKlVZ7W0&callback=initMap"></script>
 
 </body>
 </html>
