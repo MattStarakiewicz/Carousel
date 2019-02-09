@@ -61,10 +61,10 @@ window.initMap = function(){
     for(var i = 0; i < slidesData.length; i++){
       console.log(slidesData);
       var marker = new google.maps.Marker({position: slidesData[i].coords, map: map});
+      marker.addListener( 'click', function() {
+      flkty.select(i);
+      });
     }
-    
-
-   // var marker = new google.maps.Marker({position: coords1, map: map});
 }
 
 
